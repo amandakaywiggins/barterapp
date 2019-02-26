@@ -1,0 +1,112 @@
+$colors: (
+    primary: #F4F0F6,
+    accent: #F4E2FD,
+    text: #826E8B,
+    tertiary: #DED6E2,
+    darkaccent: #A999B1,
+    black: #000000
+);
+
+@function colors($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+body {
+    color: colors(text);
+    background-color: colors(primary);
+}
+
+#header {
+    padding: 10px;
+    font-family: 'Cherry Swash';
+}
+
+#login {
+    margin-top: 20px;
+
+    a {
+      color: colors(text);
+      font-size: 0.8em;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: colors(black);
+    }
+}
+
+#logo {
+    text-align: center;
+
+    h1 {
+        font-size: 4em;
+    }
+}
+
+#search {
+    .input-group {
+        float: right;
+        margin-top: 20px;
+    }
+
+    #basic-addon2 {
+      color: colors(black);
+        background-color: colors(darkaccent);
+    }
+}
+
+#menu {
+    background-color: colors(accent);
+    padding: 20px;
+    font-family: 'Cherry Swash';
+
+    h2 {
+        color: colors(black);
+        text-align: center;
+    }
+
+    h2:hover {
+        color: colors(text);
+    }
+}
+
+#splash1 {
+    font-family: 'Roboto', sans-serif;
+    color: colors(black);
+    background-color: colors(darkaccent);
+    margin-top: 40px;
+    text-align: center;
+
+    h2 {
+      font-weight: bold;
+      font-size: 2.5em;
+      margin-top: 150px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    #splashimg {
+      height: 450px;
+      background-image: url("../images/chum_i.jpg");
+    }
+}
+
+#splash2 {
+    font-family: 'Roboto', sans-serif;
+    background-color: colors(tertiary);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    h2 {
+        font-weight: bold;
+        font-size: 4.5em;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}
